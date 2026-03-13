@@ -5,7 +5,6 @@ import { ThemeProviderWrapper } from '@/components/providers/theme-provider-wrap
 import { CookieBanner } from '@/components/cookie-banner';
 import { Analytics } from '@/components/analytics';
 import { StructuredData } from '@/components/structured-data';
-import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],

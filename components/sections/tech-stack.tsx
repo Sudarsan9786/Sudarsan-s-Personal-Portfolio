@@ -55,7 +55,7 @@ export function TechStack() {
         viewport={{ once: true, margin: '-100px' }}
         className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 max-w-6xl mx-auto"
       >
-        {technologies.map((tech, index) => (
+        {technologies.map((tech) => (
           <motion.div
             key={tech.name}
             variants={itemVariants}
