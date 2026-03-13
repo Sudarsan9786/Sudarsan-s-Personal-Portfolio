@@ -4,7 +4,7 @@ describe('Homepage', () => {
   });
 
   it('displays the hero section', () => {
-    cy.contains('React Frontend Developer').should('be.visible');
+    cy.contains('Full Stack Developer').should('be.visible');
   });
 
   it('navigates to projects section', () => {
@@ -20,9 +20,17 @@ describe('Homepage', () => {
   });
 
   it('toggles theme', () => {
-    cy.get('body').should('have.class', 'light').or('have.class', 'dark');
+    cy.get('body').then(($body) => {
+      const hasLight = $body.hasClass('light');
+      const hasDark = $body.hasClass('dark');
+      expect(hasLight || hasDark).to.be.true;
+    });
     cy.get('[aria-label="Toggle theme"]').click();
-    cy.get('body').should('have.class', 'light').or('have.class', 'dark');
+    cy.get('body').then(($body) => {
+      const hasLight = $body.hasClass('light');
+      const hasDark = $body.hasClass('dark');
+      expect(hasLight || hasDark).to.be.true;
+    });
   });
 
   it('submits contact form', () => {
