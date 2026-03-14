@@ -38,10 +38,23 @@
   border-color: hsl(var(--border));
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   color: hsl(var(--foreground));
   background: hsl(var(--background));
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Prevent flash of unstyled content on mobile */
+html.dark {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
 }
 
 @layer utilities {

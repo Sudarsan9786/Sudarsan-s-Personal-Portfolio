@@ -11,7 +11,7 @@ export function Navigation() {
   const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -76,18 +76,24 @@ export function Navigation() {
 
           <div className="flex items-center gap-4">
             {/* Theme Toggle */}
-            {mounted && (
+            {mounted ? (
               <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                onClick={() => {
+                  const newTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+                  setTheme(newTheme);
+                }}
                 className="p-2 rounded-lg hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 aria-label="Toggle theme"
+                type="button"
               >
-                {theme === 'dark' ? (
+                {resolvedTheme === 'dark' ? (
                   <Sun className="h-5 w-5" aria-hidden="true" />
                 ) : (
                   <Moon className="h-5 w-5" aria-hidden="true" />
                 )}
               </button>
+            ) : (
+              <div className="p-2 rounded-lg w-9 h-9" aria-hidden="true" />
             )}
 
             {/* Mobile Menu Button */}

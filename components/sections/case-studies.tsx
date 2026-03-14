@@ -13,18 +13,11 @@ export function CaseStudies() {
         'A legacy dashboard with poor performance, outdated UI, and low user engagement. Users reported slow load times and difficulty finding key metrics.',
       solution:
         'Redesigned the entire dashboard using React and Next.js, implemented server-side rendering for faster initial loads, and created an intuitive data visualization system.',
-      implementation: [
-        'Migrated from legacy jQuery to React with TypeScript',
-        'Implemented Next.js SSR for 60% faster load times',
-        'Created reusable component library',
-        'Added real-time data updates with WebSockets',
-        'Optimized bundle size by 40%',
-      ],
+      implementation: 'Next.js, React, Tailwind CSS',
       results: [
-        '60% reduction in page load time',
-        '45% increase in user engagement',
-        '30% improvement in task completion rate',
-        'Zero critical bugs in production',
+        'Lighthouse Performance 95+',
+        'SEO Optimized',
+        'Mobile Responsive',
       ],
     },
     {
@@ -33,18 +26,11 @@ export function CaseStudies() {
         'An e-commerce platform experiencing slow checkout flows, high bounce rates, and poor mobile experience leading to lost sales.',
       solution:
         'Implemented code splitting, image optimization, and progressive web app features. Redesigned checkout flow with optimized state management.',
-      implementation: [
-        'Implemented route-based code splitting',
-        'Optimized images with WebP format and lazy loading',
-        'Added PWA capabilities for offline support',
-        'Refactored state management with Zustand',
-        'Implemented skeleton loading states',
-      ],
+      implementation: 'Next.js, React, Tailwind CSS',
       results: [
-        '50% improvement in Core Web Vitals',
-        '35% increase in mobile conversions',
-        '25% reduction in bounce rate',
-        '90+ Lighthouse performance score',
+        'Lighthouse Performance 95+',
+        'SEO Optimized',
+        'Mobile Responsive',
       ],
     },
   ];
@@ -111,14 +97,9 @@ export function CaseStudies() {
                     <ArrowRight className="h-5 w-5 text-primary" aria-hidden="true" />
                     Implementation
                   </h3>
-                  <ul className="space-y-2">
-                    {study.implementation.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-muted-foreground">
+                    Technologies used: {study.implementation}
+                  </p>
                 </div>
 
                 <div>
@@ -126,14 +107,17 @@ export function CaseStudies() {
                     <ArrowRight className="h-5 w-5 text-primary" aria-hidden="true" />
                     Results
                   </h3>
-                  <ul className="space-y-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {study.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                        <span className="text-muted-foreground font-medium">{result}</span>
-                      </li>
+                      <div
+                        key={resultIndex}
+                        className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 border border-border"
+                      >
+                        <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" aria-hidden="true" />
+                        <span className="text-sm font-medium">{result}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </CardContent>
             </Card>

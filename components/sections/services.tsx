@@ -9,46 +9,46 @@ import {
   Gauge,
   Smartphone,
   Rocket,
-  Shield,
+  Database,
 } from 'lucide-react';
 
 export function Services() {
   const services = [
     {
       icon: Code2,
-      title: 'Frontend Development',
+      title: 'React Web Applications',
       description:
-        'Building responsive, interactive user interfaces using React, Next.js, and modern JavaScript frameworks.',
+        'Building modern and scalable frontend applications.',
     },
     {
       icon: Layout,
-      title: 'React Applications',
+      title: 'SaaS Dashboard Development',
       description:
-        'Developing scalable React applications with state management, routing, and performance optimization.',
-    },
-    {
-      icon: Gauge,
-      title: 'SaaS Dashboards',
-      description:
-        'Creating intuitive admin dashboards and data visualization interfaces for enterprise SaaS products.',
+        'Designing clean and data-driven dashboards.',
     },
     {
       icon: Smartphone,
       title: 'Landing Page Development',
       description:
-        'Designing and developing high-converting landing pages with modern animations and responsive design.',
+        'High converting landing pages for startups.',
     },
     {
       icon: Rocket,
       title: 'Performance Optimization',
       description:
-        'Optimizing web applications for speed, SEO, and Core Web Vitals to ensure excellent user experience.',
+        'Improving page speed and Lighthouse scores.',
     },
     {
-      icon: Shield,
-      title: 'Code Quality & Testing',
+      icon: Gauge,
+      title: 'UI Implementation from Figma',
       description:
-        'Writing maintainable code with TypeScript, comprehensive testing, and following best practices.',
+        'Converting designs into production-ready UI.',
+    },
+    {
+      icon: Database,
+      title: 'API Integration & Development',
+      description:
+        'Connecting frontend with backend APIs and third-party services.',
     },
   ];
 

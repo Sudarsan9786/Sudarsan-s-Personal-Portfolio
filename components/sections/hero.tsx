@@ -102,7 +102,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto"
           >
-            I build fast, scalable, and SEO-optimized web applications for startups and businesses.
+            I build fast, scalable, and SEO-optimized web applications for startups and modern businesses.
           </motion.p>
 
           <motion.div
@@ -111,18 +111,20 @@ export function Hero() {
           >
             <Button
               size="lg"
-              onClick={() => scrollToSection('#projects')}
+              onClick={() => scrollToSection('#contact')}
               className="w-full sm:w-auto text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label="Start a project"
             >
-              View Projects
+              Start a Project
             </Button>
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => scrollToSection('#projects')}
               className="w-full sm:w-auto text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label="View projects"
             >
-              Hire Me
+              View Projects
             </Button>
           </motion.div>
 

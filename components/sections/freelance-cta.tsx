@@ -44,22 +44,39 @@ export function FreelanceCTA() {
             Have a project in mind?
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Let's build something great together.
+            Let's build a fast, modern and scalable web experience for your business.
           </p>
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Button
-              size="lg"
-              onClick={scrollToContact}
-              className="text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Start a Project
-              <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-            </Button>
-          </motion.div>
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                className="w-full sm:w-auto text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label="Start a project"
+              >
+                Start a Project
+                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={scrollToContact}
+                className="w-full sm:w-auto text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label="Contact me"
+              >
+                Contact Me
+              </Button>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

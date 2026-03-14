@@ -3,30 +3,45 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { Card, CardContent } from '@/components/ui/card';
-import { Gauge, Search, Shield, Zap } from 'lucide-react';
+import { Gauge, Search, Shield, Zap, Code2, FileCode } from 'lucide-react';
 
 export function PerformanceProof() {
   const metrics = [
     {
       icon: Gauge,
-      title: 'Google Lighthouse Performance',
-      value: '95+',
+      title: 'Lighthouse Performance',
+      value: '90+',
       description: 'Optimized for speed and performance',
-      tool: 'Google Lighthouse',
     },
     {
       icon: Search,
       title: 'SEO Optimized',
       value: '100%',
       description: 'Fully optimized for search engines',
-      tool: 'Google PageSpeed Insights',
     },
     {
       icon: Shield,
       title: 'WCAG Accessible',
       value: 'AAA',
       description: 'WCAG compliant and accessible',
-      tool: 'Accessibility Testing',
+    },
+    {
+      icon: Zap,
+      title: 'Responsive Design',
+      value: '100%',
+      description: 'Perfect on all devices',
+    },
+    {
+      icon: Code2,
+      title: 'Clean Architecture',
+      value: '✓',
+      description: 'Maintainable and scalable code',
+    },
+    {
+      icon: FileCode,
+      title: 'Type Safe Code',
+      value: 'TypeScript',
+      description: 'Full type safety with TypeScript',
     },
   ];
 
@@ -55,15 +70,15 @@ export function PerformanceProof() {
   return (
     <Section
       id="performance"
-      title="Performance Proof"
-      subtitle="Built with performance, SEO, and accessibility in mind"
+      title="Built with Performance and Quality in Mind"
+      subtitle="Technical excellence in every project"
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-100px' }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
       >
         {metrics.map((metric, index) => {
           const Icon = metric.icon;
@@ -76,10 +91,7 @@ export function PerformanceProof() {
                   </div>
                   <div className="text-4xl font-bold text-primary mb-2">{metric.value}</div>
                   <h3 className="text-lg font-semibold mb-2">{metric.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4">{metric.description}</p>
-                  <div className="text-xs text-muted-foreground border-t border-border pt-4">
-                    Verified with {metric.tool}
-                  </div>
+                  <p className="text-sm text-muted-foreground">{metric.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
