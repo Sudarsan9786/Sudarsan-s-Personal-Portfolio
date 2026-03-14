@@ -93,17 +93,16 @@ export function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-muted-foreground mb-4"
+            className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 font-medium"
           >
-            Full Stack Developer
+            Frontend Engineer specializing in React & Next.js
           </motion.p>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto"
           >
-            Building modern, scalable web applications with expertise in React, Next.js, and TypeScript. 
-            Creating beautiful, performant, and accessible user experiences for enterprise applications.
+            I build fast, scalable, and SEO-optimized web applications for startups and businesses.
           </motion.p>
 
           <motion.div
@@ -113,7 +112,7 @@ export function Hero() {
             <Button
               size="lg"
               onClick={() => scrollToSection('#projects')}
-              className="w-full sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="w-full sm:w-auto text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               View Projects
             </Button>
@@ -121,9 +120,9 @@ export function Hero() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('#contact')}
-              className="w-full sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="w-full sm:w-auto text-lg px-8 py-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              Get In Touch
+              Hire Me
             </Button>
           </motion.div>
 

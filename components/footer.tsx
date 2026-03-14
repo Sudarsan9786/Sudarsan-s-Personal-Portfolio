@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, ExternalLink } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -88,21 +88,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-border pt-8">
+          <p className="text-sm text-muted-foreground text-center">
             © {currentYear} Sudarsan Perumal V. All rights reserved.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Built with{' '}
-            <a
-              href="https://nextjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline inline-flex items-center gap-1"
-            >
-              Next.js
-              <ExternalLink className="h-3 w-3" aria-hidden="true" />
-            </a>
           </p>
         </div>
       </div>
